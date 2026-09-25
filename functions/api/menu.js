@@ -23,7 +23,13 @@ export async function onRequestGet({ request }) {
 
   if (
     !ALLOWED.has(slug) ||
-    !["lunch", "dinner"].includes(meal) ||
+    ![
+      "breakfast",
+      "lunch",
+      "dinner",
+      "salad-bar",
+      "desserts-daily-offerings"
+     ].includes(meal) ||
     !/^\d{4}-\d{2}-\d{2}$/.test(date || "")
   ) {
     return new Response("Bad request", { status: 400 });
