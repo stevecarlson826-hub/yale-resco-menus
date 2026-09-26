@@ -28,7 +28,7 @@ export async function onRequestGet({ request }) {
       "lunch",
       "dinner",
       "salad-bar",
-      "desserts-daily-offerings"
+      "daily-offerings"
      ].includes(meal) ||
     !/^\d{4}-\d{2}-\d{2}$/.test(date || "")
   ) {
